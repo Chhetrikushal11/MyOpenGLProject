@@ -106,7 +106,7 @@ set(OPTIONAL_SOURCES
     src/systems/camera_system.cpp
     src/systems/motion_system.cpp
     src/systems/render_system.cpp
-    src/factory/factory.cpp
+   # src/factory/factory.cpp
 )
 
 foreach(src ${OPTIONAL_SOURCES})
@@ -131,7 +131,7 @@ set(OPTIONAL_HEADERS
     include/systems/camera_system.h
     include/systems/render_system.h
     include/systems/motion_system.h
-    include/factory/factory.h
+   # include/factory/factory.h
 )
 
 foreach(hdr ${OPTIONAL_HEADERS})

@@ -29,7 +29,7 @@ int main()
 
 	unsigned int cameraEntity = app->make_entity();
 	transform.position = { 0.0f, 0.0f, 1.0f };
-	transform.eulers = { 0.0f, 0.0f, 0.0f};
+	transform.eulers = { 0.0f, 0.0f, 0.0f };
 	app->transformComponents[cubeEntity] = transform;
 
 	CameraComponent* camera = new CameraComponent();

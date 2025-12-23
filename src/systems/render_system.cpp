@@ -29,6 +29,3 @@ void RenderSystem::update(std::unordered_map<unsigned int, TransformComponent>& 
 	}
 	glfwSwapBuffers(window);
 }
-
-
-
