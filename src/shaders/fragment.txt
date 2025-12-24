@@ -1,20 +1,10 @@
 #version 330 core
-in vec3 fragmentColor;
-in vec2 fragmentTexCoord;
 
+in vec2 fragmentTexCoord;
 out vec4 screenColor;
 
-uniform sampler2D material; // Texture unit 0
-uniform sampler2D mask;     // Texture unit 1
+uniform sampler2D material;
 
 void main() {
-    // Convert texture coordinates from NDC (-1 to 1) to UV (0 to 1)
-    vec2 texCoord = fragmentTexCoord * 0.5 + 0.5;
-    
-    // Sample both textures
-    vec3 baseColor = texture(material, texCoord).rgb;
-    float alpha = texture(mask, texCoord).r;  // FIXED: was fragmentTexCord (typo)
-    
-    // Combine: use base color with alpha from mask
-    screenColor = vec4(baseColor, alpha);  // FIXED: was texture(material, alpha) - wrong!
+    screenColor = texture(material, fragmentTexCoord);
 }

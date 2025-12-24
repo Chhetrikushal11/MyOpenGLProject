@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(MyOpenGLProject VERSION 1.0.0 LANGUAGES CXX)
+project(MyOpenGLProject VERSION 1.0.0 LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -93,6 +93,12 @@ target_include_directories(stb INTERFACE ${STB_DIR})
 # Start with main.cpp (required)
 set(SOURCE_FILES
     src/main.cpp
+     src/app/app.cpp
+     src/config.cpp
+    src/view/shader.cpp
+    src/systems/camera_system.cpp
+    src/systems/motion_system.cpp
+    src/systems/render_system.cpp
 )
 
 # Add optional source files if they exist
@@ -101,11 +107,7 @@ set(OPTIONAL_SOURCES
     src/triangle_mesh.cpp
     src/material.cpp
     src/linear_algebros.cpp
-    src/app/app.cpp
-    src/view/shader.cpp
-    src/systems/camera_system.cpp
-    src/systems/motion_system.cpp
-    src/systems/render_system.cpp
+   
    # src/factory/factory.cpp
 )
 
